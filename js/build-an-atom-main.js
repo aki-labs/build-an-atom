@@ -41,9 +41,5 @@ simLauncher.launch( () => {
     new SymbolScreen( tandem.createTandem( 'symbolScreen' ) )
   ];
 
-  // PhET-iO does not support the game screen (yet), see https://github.com/phetsims/build-an-atom/issues/156
-  if ( !Tandem.PHET_IO_ENABLED ) {
-    screens.push( new GameScreen( tandem.createTandem( 'gameScreen' ) ) );
-  }
   new Sim( buildAnAtomTitleString, screens, simOptions ).start();
 } );
